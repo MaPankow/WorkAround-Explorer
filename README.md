@@ -88,3 +88,7 @@ As an extra challenge:
 - **[ ]** Define and export a function in utilities.js called formatNumber(). This function should have a number parameter and should return a string representation of that number value with a comma (,) character between every 3rd digit.
 - **[ ]** Import this function into main.js and use it to format the four data values rendered to the screen.
 
+## Setting up a local server to see the project in the browser
+As I noticed, this project needs to run on a local server. Modules must be loaded using http:// or https:// for security reasons. If I open the files directly using the file:// protocol, most modern browsers will block module imports to prevent possible harm to my computer. By setting up a local server, the page loads via localhost using http:// or https://, which provides the same security as when opening any webpage.
+
+I'm using a Live Server extension for my VS Code which makes it very easy to start the server.
