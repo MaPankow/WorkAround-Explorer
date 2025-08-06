@@ -20,7 +20,7 @@ After the user selects a role from the first column and a company from the secon
 Much of the user interface has already been designed by front-end developers, however, the core data and functionality are either missing or need to be connected together using modules. Your task is to help your team members out by using your import and export expertise!
 
 ###TODO
-**[ ] 1.** These first four tasks will focus on rendering the input elements using the names of the companies and the different roles available in the collected salary data.
+**[x] 1.** These first four tasks will focus on rendering the input elements using the names of the companies and the different roles available in the collected salary data.
 
 Open salaryData.js, where you will find the collected data in the variable salaryData. Below are four functions for filtering down this data.
 
