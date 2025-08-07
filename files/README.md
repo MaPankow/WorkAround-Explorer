@@ -62,7 +62,7 @@ To complete these four functions, you will need some data from salaryData.js.
 
 In main.js, import the four functions from workAroundModule.js.
 
-**[ ] 9.** And finally, take a look at updateResults(). This function is called any time the user selects one of the radio input elements.
+**[x] 9.** And finally, take a look at updateResults(). This function is called any time the user selects one of the radio input elements.
 
 At the top of the definition of updateResults(), the company and role selected by the user are extracted from the <input> elements. These values can be used in combination with the imported functions from workAroundModule.js to calculate the four variables below:
 
