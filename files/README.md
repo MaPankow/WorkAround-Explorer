@@ -56,9 +56,9 @@ To complete these four functions, you will need some data from salaryData.js.
 
 **[x] 6.** Each of the incomplete functions in workAroundModule.js contains an empty array ([]) that needs to be replaced. You will need to use the appropriate imported data/functions from the salaryData.js module to replace these arrays.
 
-**[ ] 7.** As a final step, to make these functions available to main.js, export the four functions using named export syntax.
+**[x] 7.** As a final step, to make these functions available to main.js, export the four functions using named export syntax.
 
-**[ ] 8.** We are all set up now to use the functions defined in workAroundModule.js to calculate and render the data based on the user’s input selections.
+**[x] 8.** We are all set up now to use the functions defined in workAroundModule.js to calculate and render the data based on the user’s input selections.
 
 In main.js, import the four functions from workAroundModule.js.
 
