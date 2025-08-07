@@ -45,7 +45,7 @@ In index.html, add a type attribute to the tag script src='main.js' with the cor
 
 After completing this task, all three columns should render again, and you should see the radio-style input elements rendered in your application!
 
-**[ ] 5.** Try selecting a combination of company and role and you’ll see that the data isn’t being calculated. Instead, all four values are showing up as $0.
+**[x] 5.** Try selecting a combination of company and role and you’ll see that the data isn’t being calculated. Instead, all four values are showing up as $0.
 
 Open up workAroundModule.js, where you will find four functions that each calculate a different data value that we want to display. They are currently incomplete.
 
@@ -54,7 +54,7 @@ To complete these four functions, you will need some data from salaryData.js.
 - Import the functions getDataByRole() and getDataByCompany() from salaryData.js using named import syntax.
 - Import salaryData from salaryData.js using the default import syntax.
 
-**[ ] 6.** Each of the incomplete functions in workAroundModule.js contains an empty array ([]) that needs to be replaced. You will need to use the appropriate imported data/functions from the salaryData.js module to replace these arrays.
+**[x] 6.** Each of the incomplete functions in workAroundModule.js contains an empty array ([]) that needs to be replaced. You will need to use the appropriate imported data/functions from the salaryData.js module to replace these arrays.
 
 **[ ] 7.** As a final step, to make these functions available to main.js, export the four functions using named export syntax.
 
