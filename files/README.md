@@ -39,7 +39,7 @@ First, at the top of main.js, use ES6 named import syntax to import getRoles and
 
 **[x] 3.** Now, replace the empty arrays assigned to companies and roles with function calls to getCompanies() and getRoles(), respectively.
 
-**[ ] 4.** The radio-style input elements will not render, and some of the columns have disappeared. This is because we are now required to specify that main.js is using modules.
+**[x] 4.** The radio-style input elements will not render, and some of the columns have disappeared. This is because we are now required to specify that main.js is using modules.
 
 In index.html, add a type attribute to the tag script src='main.js' with the correct value to indicate that the main.js script is using modules.
 
