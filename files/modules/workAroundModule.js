@@ -1,5 +1,5 @@
-import { getDataByRole, getDataByCompany } from "./salaryData";
-import salaryData from "./salaryData";
+import { getDataByRole, getDataByCompany } from "./salaryData.js";
+import salaryData from "./salaryData.js";
 
 // The getDataByRole function takes a role parameter, which matches the role selected by user through radio button 
 const getAverageSalaryByRole = role => {
@@ -38,3 +38,5 @@ function calculateAverage(arrayOfNumbers) {
   arrayOfNumbers.forEach(number => total += number);
   return (total / arrayOfNumbers.length).toFixed(2);
 }
+
+export { getAverageSalaryByRole, getAverageSalaryByCompany, getSalaryAtCompany, getIndustryAverageSalary };
