@@ -29,7 +29,7 @@ You need to:
 - Export the four functions from salaryData.js using ES6 named export syntax.
 - Export the salaryData array as the default export.
 
-**[ ] 2.** Open up main.js and take a look at the function renderInputButtons(). This function accepts an array of labels that are used to create individual radio-style input elements. The function also accepts a string that is used as the name for that input group.
+**[x] 2.** Open up main.js and take a look at the function renderInputButtons(). This function accepts an array of labels that are used to create individual radio-style input elements. The function also accepts a string that is used as the name for that input group.
 
 Currently, this function is being called twice with the variables companies and roles as the first arguments. However, each of these variables is assigned an empty array.
 
