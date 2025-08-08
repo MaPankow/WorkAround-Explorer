@@ -70,6 +70,15 @@ function updateResults(){
   console.log("salary formatted: ", formatSalary(salary));
   console.log("industryAverageSalary formatted: ", formatSalary(industryAverageSalary));
 
+
+  // checking types of variables to see if they are the reason
+
+  console.log(typeof averageSalaryByRole); // logs string
+  console.log(typeof averageSalaryByCompany); // logs string
+  console.log(typeof salary); // logs number
+  console.log(typeof industryAverageSalary); // logs string
+
+
   // Render them to the screen.
   document.getElementById('salarySelected').innerText = `The salary for ${role}s at ${company} is \$${salary}`;
   document.getElementById('salaryAverageByRole').innerText = `The industry average salary for ${role} positions is \$${averageSalaryByRole}`;
