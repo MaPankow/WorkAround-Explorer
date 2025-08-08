@@ -3,4 +3,3 @@ export default function formatSalary(number) {
     return formattedSalary;
 }
 
-console.log(formatSalary(1234567.89));

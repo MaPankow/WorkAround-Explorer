@@ -1,5 +1,6 @@
 import { getRoles, getCompanies } from './modules/salaryData.js';
 import { getAverageSalaryByRole, getAverageSalaryByCompany, getSalaryAtCompany, getIndustryAverageSalary } from './modules/workAroundModule.js';
+import formatSalary from './modules/utilities.js';
 
 const companies = getCompanies();
 const roles = getRoles();
@@ -58,9 +59,21 @@ function updateResults(){
   const salary = getSalaryAtCompany(role, company);
   const industryAverageSalary = getIndustryAverageSalary();
 
+  // test the formatSalary function in the console
+  console.log("averageSalaryByRole unformatted: ", averageSalaryByRole);
+  console.log("averageSalaryByCompany unformatted: ", averageSalaryByCompany);
+  console.log("salary unformatted: ", salary);
+  console.log("industryAverageSalary unformatted: ", industryAverageSalary);
+  console.log("1234567.89 formatted: ", formatSalary(1234567.89));
+  console.log("averageSalaryByCompany formatted: ", formatSalary(averageSalaryByCompany));
+  console.log("averageSalaryByRole unformatted: ", formatSalary(averageSalaryByRole));
+  console.log("salary formatted: ", formatSalary(salary));
+  console.log("industryAverageSalary formatted: ", formatSalary(industryAverageSalary));
+
   // Render them to the screen.
   document.getElementById('salarySelected').innerText = `The salary for ${role}s at ${company} is \$${salary}`;
   document.getElementById('salaryAverageByRole').innerText = `The industry average salary for ${role} positions is \$${averageSalaryByRole}`;
   document.getElementById('salaryAverageByCompany').innerText = `The average salary at ${company} is \$${averageSalaryByCompany}`;
   document.getElementById('salaryAverageIndustry').innerText = `The average salary in the Tech industry is \$${industryAverageSalary}`;
 }
+
