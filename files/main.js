@@ -54,29 +54,10 @@ function updateResults(){
   if (!company || !role) { return; }
 
   // Use the workAroundModule functions to calculate the needed data.
-  const averageSalaryByRole = getAverageSalaryByRole(role);
-  const averageSalaryByCompany = getAverageSalaryByCompany(company);
-  const salary = getSalaryAtCompany(role, company);
-  const industryAverageSalary = getIndustryAverageSalary();
-
-  // test the formatSalary function in the console
-  console.log("averageSalaryByRole unformatted: ", averageSalaryByRole);
-  console.log("averageSalaryByCompany unformatted: ", averageSalaryByCompany);
-  console.log("salary unformatted: ", salary);
-  console.log("industryAverageSalary unformatted: ", industryAverageSalary);
-  console.log("1234567.89 formatted: ", formatSalary(1234567.89));
-  console.log("averageSalaryByCompany formatted: ", formatSalary(averageSalaryByCompany));
-  console.log("averageSalaryByRole unformatted: ", formatSalary(averageSalaryByRole));
-  console.log("salary formatted: ", formatSalary(salary));
-  console.log("industryAverageSalary formatted: ", formatSalary(industryAverageSalary));
-
-
-  // checking types of variables to see if they are the reason
-
-  console.log(typeof averageSalaryByRole); // logs string
-  console.log(typeof averageSalaryByCompany); // logs string
-  console.log(typeof salary); // logs number
-  console.log(typeof industryAverageSalary); // logs string
+  const averageSalaryByRole = formatSalary(getAverageSalaryByRole(role));
+  const averageSalaryByCompany = formatSalary(getAverageSalaryByCompany(company));
+  const salary = formatSalary(getSalaryAtCompany(role, company));
+  const industryAverageSalary = formatSalary(getIndustryAverageSalary());
 
 
   // Render them to the screen.
