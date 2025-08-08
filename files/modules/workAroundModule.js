@@ -33,10 +33,11 @@ const getIndustryAverageSalary = () => {
 
 // Helper Function. Do not edit.
 // Note: This function does not need to be exported since it is only used by the functions contained within this module.
+// Use built-in function parseFloat to return numbers, not strings
 function calculateAverage(arrayOfNumbers) {
   let total = 0;
   arrayOfNumbers.forEach(number => total += number);
-  return (total / arrayOfNumbers.length).toFixed(2);
+  return parseFloat((total / arrayOfNumbers.length).toFixed(2));
 }
 
 export { getAverageSalaryByRole, getAverageSalaryByCompany, getSalaryAtCompany, getIndustryAverageSalary };
