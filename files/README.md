@@ -1,94 +1,57 @@
 # WorkAround Explorer
 
-# WorkAround Explorer
-
-This project is part of a JavaScript course on [Codecademy](https://www.codecademy.com). The initial code was provided by Codecademy and can be seen in my initial commit.
+This project is part of a JavaScript course on [Codecademy](https://www.codecademy.com). The initial code was provided by Codecademy and can be seen in my initial commit. The tasks focus on pacticing JavaScript imports and exports!
 
 ## Tasks as given by Codecademy:
 
-WorkAround is a research organization that provides data on salary trends in the tech industry. Open up salaryData.js to see the data they have collected. You’ll notice that they have also created a few functions for filtering that data to get subsets of data by role and by company.
+The following list is a personal summary of the tasks given by Codecademy — rephrased in my own words to reflect what I understood and implemented during the project.
 
-WorkAround now wants to release a new web application called WorkAround Explorer to make their data more easily viewable. This web app should allow users to choose specific roles and companies in the tech industry to see the following information:
+The tasks were originally presented in a clear and detailed step-by-step format and the descriptions below are based on that structure, but without any original wording or copyrighted task instructions.
+
+"WorkAround" is the name of a fictional reserch organization. The research data is already given in salaryData.js. According to the choice of a role and a company, the app fetches specific data and displays it to the screen:
 
 - The salary for the chosen role at the chosen company.
 - The industry average for the chosen role.
 - The average salary at the chosen company across all roles.
 - The industry average salary across all roles and all companies.
 
-After the user selects a role from the first column and a company from the second, the relevant data is shown in the third column
 
-Much of the user interface has already been designed by front-end developers, however, the core data and functionality are either missing or need to be connected together using modules. Your task is to help your team members out by using your import and export expertise!
 
 ###TODO
-**[x] 1.** These first four tasks will focus on rendering the input elements using the names of the companies and the different roles available in the collected salary data.
+**[x] 1.** Exported four functions from `salaryData.js` as named exports, and exported the `salaryData` array as the default export.
 
-Open salaryData.js, where you will find the collected data in the variable salaryData. Below are four functions for filtering down this data.
+**[x] 2.** Imported the functions `getRoles()` and `getCompanies()` into `main.js`.
 
-You need to:
+**[x] 3.** Initialized the variables `companies` and `roles` with the respective function calls instead of using empty arrays.
 
-- Export the four functions from salaryData.js using ES6 named export syntax.
-- Export the salaryData array as the default export.
+**[x] 4.** Added the `type` attribute to the `<script src='main.js'>` tag in `index.html` to indicate that the script uses ES6 modules.
 
-**[x] 2.** Open up main.js and take a look at the function renderInputButtons(). This function accepts an array of labels that are used to create individual radio-style input elements. The function also accepts a string that is used as the name for that input group.
+**[x] 5.** In `workAroundModule.js`, the functions initially returned placeholder values of `$0`. Imported `getDataByRole()`, `getDataByCompany()`, and `salaryData` to calculate real data.
 
-Currently, this function is being called twice with the variables companies and roles as the first arguments. However, each of these variables is assigned an empty array.
 
-Instead, you will use the getRoles() and getCompanies() functions from salaryData.js to initialize these variables.
+**[x] 6.** Replaced placeholder arrays with correct logic to calculate the results using the imported functions.
 
-First, at the top of main.js, use ES6 named import syntax to import getRoles and getCompanies from salaryData.js. Check the file system to determine the relative path from main.js.
+**[x] 7.** Exported the four calculation functions from `workAroundModule.js`.
 
-**[x] 3.** Now, replace the empty arrays assigned to companies and roles with function calls to getCompanies() and getRoles(), respectively.
+**[x] 8.** Imported those functions into `main.js`.
 
-**[x] 4.** The radio-style input elements will not render, and some of the columns have disappeared. This is because we are now required to specify that main.js is using modules.
+**[x] 9.** Replaced placeholder values in the `updateResults()` function with actual function calls to display the calculated results.
 
-In index.html, add a type attribute to the tag script src='main.js' with the correct value to indicate that the main.js script is using modules.
-
-After completing this task, all three columns should render again, and you should see the radio-style input elements rendered in your application!
-
-**[x] 5.** Try selecting a combination of company and role and you’ll see that the data isn’t being calculated. Instead, all four values are showing up as $0.
-
-Open up workAroundModule.js, where you will find four functions that each calculate a different data value that we want to display. They are currently incomplete.
-
-To complete these four functions, you will need some data from salaryData.js.
-
-- Import the functions getDataByRole() and getDataByCompany() from salaryData.js using named import syntax.
-- Import salaryData from salaryData.js using the default import syntax.
-
-**[x] 6.** Each of the incomplete functions in workAroundModule.js contains an empty array ([]) that needs to be replaced. You will need to use the appropriate imported data/functions from the salaryData.js module to replace these arrays.
-
-**[x] 7.** As a final step, to make these functions available to main.js, export the four functions using named export syntax.
-
-**[x] 8.** We are all set up now to use the functions defined in workAroundModule.js to calculate and render the data based on the user’s input selections.
-
-In main.js, import the four functions from workAroundModule.js.
-
-**[x] 9.** And finally, take a look at updateResults(). This function is called any time the user selects one of the radio input elements.
-
-At the top of the definition of updateResults(), the company and role selected by the user are extracted from the <input> elements. These values can be used in combination with the imported functions from workAroundModule.js to calculate the four variables below:
-
-const averageSalaryByRole = 0;
-const averageSalaryByCompany = 0;
-const salary = 0;
-const industryAverageSalary = 0;
-
-As you can see, they are all assigned to 0 rather than the appropriate calculated data. Replace each 0 with a call to the appropriate imported function from workAroundModule.js using either (or both) company and role as arguments.
 
 ***Extra Challenge***
 
-**[x] 10.** Congrats! You’ve helped WorkAround build their WorkAround Explorer application using a modular approach. The end result is a well-organized program with clear boundaries for each of its separate concerns.
-
-Often, programmers will create a set of generic “utility” functions that can be applied to any program, regardless of the context. In this case, it would be useful to have a function that can properly format a number, like so:
+**[x] 10.** Formatted large numbers to improve readability, as in the provided example:
 
 const result = formatNumber(1234567.89);
 // result = "1,234,567.89"
 
-As an extra challenge:
+Some hints/further instructions to the task:
 
-- **[x]** Create a new file in the modules/ directory called utilities.js.
-- **[x]** Define and export a function in utilities.js called formatNumber(). This function should have a number parameter and should return a string representation of that number value with a comma (,) character between every 3rd digit.
-- **[x]** Import this function into main.js and use it to format the four data values rendered to the screen.
+- **[x]** Created a new module called utilities.js.
+- **[x]** Defined the formatNumber() function to take a number and return a string with proper formatting.
+- **[x]** Used this function in main.js to render formatted results to the screen.
 
 ## Setting up a local server to see the project in the browser
-As I noticed, this project needs to run on a local server. Modules must be loaded using http:// or https:// for security reasons. If I open the files directly using the file:// protocol, most modern browsers will block module imports to prevent possible harm to my computer. By setting up a local server, the page loads via localhost using http:// or https://, which provides the same security as when opening any webpage.
+This project needs to run on a local server because ES6 modules must be loaded via http:// or https:// for security reasons. If the files are opened directly using the file:// protocol, most modern browsers will block module imports.
 
-I'm using a Live Server extension for my VS Code which makes it very easy to start the server.
+To solve this, I used the Live Server extension in VS Code, which starts a local development server and allows the page to load via localhost. This mimics a real web environment and enables module-based scripts to run correctly.
