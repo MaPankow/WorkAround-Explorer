@@ -1,6 +1,10 @@
 # WorkAround Explorer
 
-This project is part of a JavaScript course on [Codecademy](https://www.codecademy.com). The initial code was provided by Codecademy and can be seen in my initial commit. The tasks focus on pacticing JavaScript imports and exports!
+This project is part of a JavaScript course on [Codecademy](https://www.codecademy.com). 
+
+**The initial code was provided by Codecademy and can be seen in [the initial commit](https://github.com/MaPankow/WorkAround-Explorer/commit/f6605be3bc1b710d64cf31efc76d51069adb01d4).**
+
+The tasks focus on pacticing JavaScript imports and exports!
 
 ## Tasks as given by Codecademy:
 
